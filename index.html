@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>David Hack</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+        // Check the initial Poistion of the Sticky Header
+        var stickyHeaderTop = $('#menuFlex').offset().top;
+        var waitForFinalEvent = (function() {
+        var timers = {};
+        return function(callback, ms, uniqueId) {
+          if (!uniqueId) {
+            uniqueId = "Don't call this twice without a uniqueId";
+          }
+          if (timers[uniqueId]) {
+            clearTimeout(timers[uniqueId]);
+          }
+            timers[uniqueId] = setTimeout(callback, ms);
+          };
+        })();
+
+        $(window).resize(function() {
+          var output = $('.output');
+          waitForFinalEvent(function() {
+            stickyHeaderTop = $('#main').offset().top - 60;
+          }, 500, "some unique string");
+        });
+
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('#menuFlex').css({position: 'fixed', top: '0px'});
+                        $('#main').css('margin-top', '60px');
+                } else {
+                        $('#menuFlex').css({position: 'static', top: '0px'});
+                        $('#main').css('margin-top', '0px');
+                }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+      <div class="titleimage">
+
+        <img src="img/planetside2-1.jpg" alt="A image from one of my favourite games, PlanetSide2"/>
+
+        <div class="title">
+          <h1>David Hack</h1>
+        </div>
+
+      </div>
+
+      <div id="menuFlex">
+        <a class="menuItem" href="#aboutme">About Me</a>
+        <a class="menuItem" href="#projects">Projects</a>
+        <a class="menuItem" href="#experience">Experience</a>
+        <a class="menuItem" href="#resume">My Resume</a>
+        <a class="menuItem" href="#contact">Contact</a>
+        <a class="menuItem">Github</a>
+        <a class="menuItem">LinkedIn</a>
+      </div>
+
+      <div id="main">
+        <div id="aboutme">
+          <div class="titleimage">
+
+            <img src="img/rust.jpg" alt="A image from one of my favourite games, PlanetSide2"/>
+
+            <div class="title">
+              <h2>About Me</h2>
+            </div>
+
+          </div>
+
+          <div class="content">
+            <div class="tile">
+              <img src="img/gaming.jpg" alt="A icon of a controller representing gaming"/>
+              <h3>Gaming</h3>
+            </div>
+            <div class="tile">
+              <img src="img/profile.jpg" alt="A image of me, David Hack"/>
+              <h3>General</h3>
+              <p>
+                I am a full-time second year student studying software engineering at Victoria University with interests in many areas including game development, graphics and AI. I am a very driven individual with a strong academic record. I enjoy almost all areas of software engineering but have had little paid experience to develop my tastes.
+              </p>
+            </div>
+            <div class="tile">
+              <img src="img/exercise.jpg" alt="A icon of a bike and weights representing exercise"/>
+              <h3>Exercise</h3>
+            </div>
+          </div>
+
+        </div>
+        <div id="projects"><p>Projects</p></div>
+        <div id="experience"><p>Experience</p></div>
+        <div id="resume"><p>My Resume</p></div>
+        <div id="contact"><p>Contact</p><img src="img/rust.jpg" alt="A image from one of my favourite games, PlanetSide2"/></div>
+      </div>
+  </body>
+
+</html>
+
+

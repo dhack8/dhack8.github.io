@@ -15,6 +15,9 @@
       $(function(){
         // Check the initial Poistion of the Sticky Header
         var stickyHeaderTop = $('#menuFlex').offset().top;
+        $(window).on("load", function() {
+          stickyHeaderTop = $('#menuFlex').offset().top;
+        });
         var waitForFinalEvent = (function() {
         var timers = {};
         return function(callback, ms, uniqueId) {

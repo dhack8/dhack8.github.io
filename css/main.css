@@ -1,38 +1,26 @@
 body {
 	margin-top: 0px;
-	margin-right: 0px;
+	margin-right: auto;
 	margin-bottom: 0px;
-	margin-left: 0px;
+	margin-left: auto;
 	font-family: 'Raleway', sans-serif;
 	width: 100%;
 	height: 100%;
 }
 
-#menuFlex {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  background-color: #282828;
-  color: lightgrey;
-  z-index: 99;
-  font-size: 1.5vw;
-}
-
-.menuItem{
-	flex: 1 1 100%;
-	line-height: 60px;
-	text-align: center;
-	transition: 0.7s;
-}
-
 .titleimage{
 	position: relative;
     width: 100%;
+    height: 20vw;
+    max-height: 95vh;
+    overflow: hidden;
+    background-size: 100vw 20vw;
+    background-position: top;
 }
 
 .titleimage img {
     vertical-align: bottom;
-    max-width: 100%;
+    width: 100%;
 }
 
 .title{
@@ -67,6 +55,23 @@ body {
     font-size: 6vw;
 }
 
+#menuFlex {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  background-color: #282828;
+  color: lightgrey;
+  z-index: 99;
+  font-size: 1.5vw;
+}
+
+.menuItem{
+	flex: 1 1 100%;
+	line-height: 60px;
+	text-align: center;
+	transition: 0.7s;
+}
+
 .menuItem:hover{
 	background-color: black;
 }
@@ -83,9 +88,7 @@ a {
 
 .tile{
 	flex: 1 1 100%;
-	background-color: white;
-	margin: 1.5vw;
-	border-radius: 4px;
+	margin: 1vw;
 }
 
 .tile img{
@@ -93,9 +96,9 @@ a {
 	border-radius: 50%;
 	border: 0.7vw solid black;
 	display: block;
-	margin: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
 }
 
 h3{
@@ -107,5 +110,5 @@ h3{
 }
 
 .tile p{
-	margin: 20px;
+	margin: 10px;
 }

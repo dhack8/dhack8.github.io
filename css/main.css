@@ -136,18 +136,35 @@ h3{
 }
 
 .projects{
-	background-color: lightgrey;
+	background-color: grey;
 	margin: auto;
 	max-width: 1720px;
 	overflow: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .project{
 	width: 300px;
 	height: 400px;
-	background-color: red;
-	margin: 1vw;
+	background-color: lightgrey;
+	margin: 10px;
 	display: inline-block;
+	vertical-align:top
+}
+
+.project p{
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	margin-top: 0px;
+}
+
+h4{
+	text-align: left;
+	font: 100px/1 'Bungee', sans-serif;
+	font-size: 25px;
+	margin: 8px;
 }
 
 @media screen and (min-width: 1500px){

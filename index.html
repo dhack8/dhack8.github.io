@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
   <head>
     <meta charset="UTF-8">
     <title>David Hack</title>
@@ -40,10 +39,10 @@
 
         $(window).scroll(function(){
                 if( $(window).scrollTop() > stickyHeaderTop ) {
-                        $('#menuFlex').css({position: 'fixed', top: '0px'});
+                        $('.fixed').css({position: 'fixed', top: '0px'});
                         $('#main').css('margin-top', '60px');
                 } else {
-                        $('#menuFlex').css({position: 'static', top: '0px'});
+                        $('.fixed').css({position: 'static', top: '0px'});
                         $('#main').css('margin-top', '0px');
                 }
         });
@@ -53,63 +52,94 @@
 
   <body>
 
-      <div class="titleimage" style="background-image: url('img/planetside2-1.jpg'); height: 40vw; background-attachment: fixed; background-size: 100vw 40vw;">
-
-      
-
+      <div class="banner" style="background-image: url('img/planetside2-1.jpg');">
         <div class="title">
           <h1>David Hack</h1>
         </div>
-
       </div>
-
-      <div id="menuFlex">
-        <a class="menuItem" href="#aboutme">About Me</a>
-        <a class="menuItem" href="#projects">Projects</a>
-        <a class="menuItem" href="#experience">Experience</a>
-        <a class="menuItem" href="#resume">My Resume</a>
-        <a class="menuItem" href="#contact">Contact</a>
-        <a class="menuItem">Github</a>
-        <a class="menuItem">LinkedIn</a>
+      
+      <div class="wrapper fixed" style="background-color: #282828;">
+        <div id="menuFlex">
+          <a class="menuItem" href="#aboutme">About Me</a>
+          <a class="menuItem" href="#projects">Projects</a>
+          <a class="menuItem" href="#experience">Experience</a>
+          <a class="menuItem" href="#resume">My Resume</a>
+          <a class="menuItem" href="#contact">Contact</a>
+          <a class="menuItem">Github</a>
+          <a class="menuItem">LinkedIn</a>
+        </div>
       </div>
-
       <div id="main">
         <div id="aboutme">
-          <div class="titleimage" style="background-image: url('img/rust.jpg');"">
-
-
+          <div class="banner small" style="background-image: url('img/rust.jpg');">
             <div class="title">
               <h2>About Me</h2>
             </div>
-
           </div>
-
-          <div class="content">
-            <div class="tile">
-              <img src="img/gaming.jpg" alt="A icon of a controller representing gaming"/>
-              <h3>Gaming</h3>
-              <p>
-                I love playing games, exploring new worlds, creating new things, getting invested in rich story narratives and playing online with friends. The first game I played was Age of Empires 2 and I haven’t looked back since. Favourite single player game is probably The Witcher 3. Steam user: HackSparrow.
-              </p>
-            </div>
-            <div class="tile">
-              <img src="img/profile.jpg" alt="A image of me, David Hack"/>
-              <h3>General</h3>
-              <p>
-                I am a full-time second year student studying software engineering at Victoria University with interests in many areas including game development, graphics and AI. I am a very driven individual with a strong academic record. I enjoy almost all areas of software engineering but have had little paid experience to develop my tastes.
-              </p>
-            </div>
-            <div class="tile">
-              <img src="img/exercise.jpg" alt="A icon of a bike and weights representing exercise"/>
-              <h3>Exercise</h3>
+          
+          <div class="wrapper" style="background-color: lightgrey;">
+            <div class="content">
+              <div class="abouttile">
+                <img src="img/gaming.jpg" alt="A icon of a controller representing gaming"/>
+                <h3>Gaming</h3>
+                <p>
+                  I love playing games, exploring new worlds, creating new things, getting invested in rich story narratives and playing online with friends. The first game I played was Age of Empires 2 and I haven’t looked back since. Favourite single player game is probably The Witcher 3. Steam user: HackSparrow.
+                </p>
+              </div>
+              <div class="abouttile">
+                <img src="img/profile.jpg" alt="A image of me, David Hack"/>
+                <h3>General</h3>
+                <p>
+                  I am a full-time second year student studying software engineering at Victoria University with interests in many areas including game development, graphics and AI. I am a very driven individual with a strong academic record. I enjoy almost all areas of software engineering but have had little paid experience to develop my tastes.
+                </p>
+              </div>
+              <div class="abouttile">
+                <img src="img/exercise.jpg" alt="A icon of a bike and weights representing exercise"/>
+                <h3>Exercise</h3>
+                <p>
+                  I usually train about 5 – 6 times a week and enjoy going to the gym with my gym buddy, cycling and running. I also rowed throughout my college years which was an amazing experience and helped me develop many life skills like teamwork, punctuality, dedication and much more.
+                </p>
+              </div>
             </div>
           </div>
-
         </div>
-        <div id="projects"><p>Projects</p></div>
+        
+        <div id="projects">
+          <div class="banner small" style="background-image: url('img/tankwars.jpg');">
+            <div class="title white">
+              <h2>Projects</h2>
+            </div>
+          </div>
+          <div class="wrapper" style="background-color: lightgrey;">
+            <div class="projects">
+              <div class="project">
+                <p>test 1</p>
+              </div>             
+              <div class="project">
+                <p>test 2</p>
+              </div>
+              <div class="project">
+                <p>test 3</p>
+              </div>
+              <div class="project">
+                <p>test 4</p>
+              </div>
+              <div class="project">
+                <p>test 5</p>
+              </div>
+              <div class="project">
+                <p>test 6</p>
+              </div>
+              <div class="project">
+                <p>test 7</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="experience"><p>Experience</p></div>
         <div id="resume"><p>My Resume</p></div>
         <div id="contact"><p>Contact</p></div>
+        <img src="img/exercise.jpg" alt="A icon of a bike and weights representing exercise"/>
       </div>
   </body>
 

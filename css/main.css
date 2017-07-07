@@ -6,21 +6,25 @@ body {
 	font-family: 'Raleway', sans-serif;
 	width: 100%;
 	height: 100%;
+	
 }
 
-.titleimage{
+.banner{
 	position: relative;
     width: 100%;
-    height: 20vw;
-    max-height: 95vh;
+    height: 40vw;
+    max-height: 70vh;
     overflow: hidden;
-    background-size: 100vw 20vw;
+    background-size: 100vw 40vw;
     background-position: top;
+    background-attachment: fixed;
 }
 
-.titleimage img {
-    vertical-align: bottom;
-    width: 100%;
+.banner.small{
+	height: 20vw;
+    max-height: 35vh;
+    background-size: 100vw 20vw;
+    background-attachment: scroll;
 }
 
 .title{
@@ -41,7 +45,7 @@ body {
 
 .title h1, h2{
     font: 100px/1 'Bungee', sans-serif;
-    font-size: 12vw;
+    font-size: 13.3vw;
     color: black;
     opacity: 0.8;
     display: inline-block;
@@ -52,17 +56,23 @@ body {
 }
 
 .title h2{
-    font-size: 6vw;
+    font-size: 6.6vw;
+}
+
+.title.white h2{
+    color: white;
+	opacity: 0.9;
 }
 
 #menuFlex {
   height: 60px;
   width: 100%;
+  margin: auto;
   display: flex;
   background-color: #282828;
   color: lightgrey;
-  z-index: 99;
-  font-size: 1.5vw;
+  font-size: 1.9vw;
+  max-width: 1720px;
 }
 
 .menuItem{
@@ -81,20 +91,32 @@ a {
   	text-decoration: inherit;
 }
 
-.content{
-	background-color: darkgrey;
-	display: flex;
+.wrapper{
+	width: 100%;
+	z-index: 99;
 }
 
-.tile{
+.fixed{
+	
+}
+
+.content{
+	background-color: lightgrey;
+	display: flex;
+	margin: auto;
+	max-width: 1720px;
+}
+
+.abouttile{
 	flex: 1 1 100%;
 	margin: 1vw;
 }
 
-.tile img{
+.abouttile img{
 	width: 50%;
 	border-radius: 50%;
 	border: 0.7vw solid black;
+	background-color: black;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -109,6 +131,43 @@ h3{
 	margin-bottom: 0px;
 }
 
-.tile p{
+.abouttile p{
 	margin: 10px;
+}
+
+.projects{
+	background-color: lightgrey;
+	margin: auto;
+	max-width: 1720px;
+	overflow: auto;
+}
+
+.project{
+	width: 300px;
+	height: 400px;
+	background-color: red;
+	margin: 1vw;
+	display: inline-block;
+}
+
+@media screen and (min-width: 1500px){
+	.title h1{
+		font-size: 200px;
+	}
+	
+	.title h2{
+		font-size: 100px;
+	}
+	
+	#menuFlex{
+		font-size: 30px;
+	}
+	
+	.abouttile img{
+		border: 10px solid black;
+	}
+	
+	h3{
+		font-size: 45px;
+	}
 }

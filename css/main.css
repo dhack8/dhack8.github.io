@@ -138,11 +138,15 @@ h3{
 .projects{
 	background-color: grey;
 	margin: auto;
-	max-width: 1720px;
+	max-width: 1760px;
 	overflow: auto;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.projects a{
+	text-decoration: underline;
 }
 
 .project{
@@ -211,5 +215,27 @@ h4{
 	
 	h3{
 		font-size: 45px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.content{
+		flex-direction: column;
+	}
+	
+	.content p{
+		font-size: 12px;
+	}
+	
+	.abouttile img{
+		width: 25%;
+	}
+	
+	.project p{
+		font-size: 12px;
+	}
+	
+	.project{
+		height: auto;
 	}
 }

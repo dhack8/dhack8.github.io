@@ -61,7 +61,7 @@ body {
 
 .title.white h2{
     color: white;
-	opacity: 0.85;
+	opacity: 0.95;
 }
 
 #menuFlex {
@@ -104,6 +104,7 @@ a {
 	background-color: lightgrey;
 	margin: auto;
 	max-width: 1720px;
+	text-align: center;
 }
 
 .about{
@@ -136,6 +137,7 @@ h3{
 
 .abouttile p{
 	margin: 10px;
+	text-align: left;
 }
 
 .projects{
@@ -145,14 +147,14 @@ h3{
 	overflow: auto;
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 
 .project{
 	width: 300px;
 	height: 400px;
 	background-color: lightgrey;
-	margin: 10px;
+	margin: 15px;
 	display: inline-block;
 	vertical-align:top;
 	transition: 0.3s;
@@ -195,6 +197,10 @@ h4{
 	text-align: left;
 }
 
+#skills{
+	padding-bottom: 15px;
+}
+
 table{
 	width: 100%;
 	table-layout: fixed;
@@ -206,8 +212,19 @@ table tr{
 	background-color: #c8c8c8;
 }
 
+.column-one{
+	width: 20%;
+}
+
+.column-two{
+	width: 20%;
+}
+
+.column-three{
+	width: 60%;
+}
+
 table td{
-	width: 33%;
 	text-align: center;
 	height: 30px;
 	padding: 5px;
@@ -240,6 +257,13 @@ table tr:first-child{
 	height: 40px;
 	line-height: 40px;
 	padding-right: 1vw;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
 }
 
 @media screen and (min-width: 1500px){

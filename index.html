@@ -49,6 +49,21 @@
         });
       });
     </script>
+    <script>
+      $(document).ready(function(){
+      $("a").on('click', function(event) {
+      if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 700, function(){
+        window.location.hash = hash;
+        });
+      }
+      });
+    });
+  </script>
   </head>
 
   <body>
@@ -61,10 +76,10 @@
       
       <div class="wrapper fixed" style="background-color: #282828;">
         <div id="menuFlex">
-          <a class="menuItem" href="#projects">Projects</a>
-          <a class="menuItem" href="#aboutme">About Me</a>
-          <a class="menuItem" href="#skills">Skills</a>
-          <a class="menuItem" href="#contact">Contact</a>
+          <a class="menuItem" href="#projectsanchor">Projects</a>
+          <a class="menuItem" href="#aboutmeanchor">About Me</a>
+          <a class="menuItem" href="#skillsanchor">Skills</a>
+          <a class="menuItem" href="#contactanchor">Contact</a>
           <a class="menuItem">My Resume</a>
           <a class="menuItem">Github</a>
           <a class="menuItem">LinkedIn</a>
@@ -72,6 +87,7 @@
       </div>
       <div id="main">
         
+        <a class="anchor" id="projectsanchor"></a>
         <div id="projects">
           <div class="banner small" style="background-image: url('img/tankwars.jpg');">
             <div class="title white">
@@ -143,13 +159,13 @@
           </div>
         </div>
         
+        <a class="anchor" id="aboutmeanchor"></a>
         <div id="aboutme">
           <div class="banner small" style="background-image: url('img/witcher3.jpg');">
             <div class="title white">
               <h2>About Me</h2>
             </div>
-          </div>
-          
+          </div>    
           <div class="wrapper" style="background-color: lightgrey;">
             <div class="content about">
               <div class="abouttile">
@@ -177,16 +193,19 @@
           </div>
         </div>
         
+        <a class="anchor" id="skillsanchor"></a>
         <div id="skills">
           <div class="banner small" style="background-image: url('img/borderlands8.jpg');">
             <div class="title white">
               <h2>Skills</h2>
             </div>
           </div>
-          
           <div class="wrapper" style="background-color: lightgrey;">
             <div class="content">
               <table>
+                <col class="column-one">
+                <col class="column-two">
+                <col class="column-three">
                 <tr>
                   <td>Skill</td>
                   <td>Training</td>
@@ -228,21 +247,40 @@
                   <td><div class="confidence" style="width: 55%; background-color: #F0FF33;">Somewhat</div></td>
                 </tr>
                 <tr>
-                  <td>PHP</td>
+                  <td>JavaScript & Jquery</td>
                   <td>College</td>
                   <td><div class="confidence" style="width: 45%; background-color: #FFB533;">Rusty</div></td>
                 </tr>
                 <tr>
-                  <td>JavaScript & Jquery</td>
+                  <td>SQL</td>
+                  <td>College</td>
+                  <td><div class="confidence" style="width: 45%; background-color: #FFB533;">Rusty</div></td>
+                </tr>
+                <tr>
+                  <td>PHP</td>
                   <td>College</td>
                   <td><div class="confidence" style="width: 35%; background-color: #FF5833;">Google</div></td>
                 </tr>
               </table>
+              <b>Soft skills may be found in resume</b>
             </div>
           </div>
-          
         </div>
-        <div id="contact"><p>Contact</p></div>
+        
+        <a class="anchor" id="contactanchor"></a>
+        <div id="contact">
+          <div class="banner small" style="background-image: url('img/rust1.jpg');">
+            <div class="title white">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <div class="emailform">
+            
+          </div>
+          <div class="findme">
+            
+          </div>
+        </div>
       </div>
   </body>
 

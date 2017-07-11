@@ -6,7 +6,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	width: 100%;
 	height: 100%;
-	
+	background-color: lightgrey;
 }
 
 .banner{
@@ -61,7 +61,7 @@ body {
 
 .title.white h2{
     color: white;
-	opacity: 0.9;
+	opacity: 0.85;
 }
 
 #menuFlex {
@@ -102,9 +102,12 @@ a {
 
 .content{
 	background-color: lightgrey;
-	display: flex;
 	margin: auto;
 	max-width: 1720px;
+}
+
+.about{
+	display: flex;
 }
 
 .abouttile{
@@ -143,10 +146,6 @@ h3{
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-.projects a{
-	text-decoration: underline;
 }
 
 .project{
@@ -196,6 +195,53 @@ h4{
 	text-align: left;
 }
 
+table{
+	width: 100%;
+	table-layout: fixed;
+	padding: 1vw;
+	margin-top: 1vw;
+}
+
+table tr{
+	background-color: #c8c8c8;
+}
+
+table td{
+	width: 33%;
+	text-align: center;
+	height: 30px;
+	padding: 5px;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+table td:first-child{
+	text-align: left;
+	padding-left: 1vw;
+}
+
+table td:last-child{
+	text-align: right;
+	padding-right: 1vw;
+}
+
+table tr:nth-child(odd) {
+  background: #bebebe;
+}
+
+table tr:first-child{
+	font: 100px/1 'Bungee', sans-serif;
+	font-size: 2.5vw;
+	background-color: lightgrey;
+}
+
+.confidence{
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	padding-right: 1vw;
+}
+
 @media screen and (min-width: 1500px){
 	.title h1{
 		font-size: 200px;
@@ -215,6 +261,18 @@ h4{
 	
 	h3{
 		font-size: 45px;
+	}
+	
+	table tr:first-child{
+		font-size: 38px;
+	}
+	
+	table td:first-child{
+		padding-left: 15px;
+	}
+
+	table td:last-child{
+		padding-right: 15px;
 	}
 }
 
@@ -237,5 +295,9 @@ h4{
 	
 	.project{
 		height: auto;
+	}
+	
+	table{
+		font-size: 10px;
 	}
 }

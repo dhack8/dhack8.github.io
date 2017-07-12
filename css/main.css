@@ -204,8 +204,7 @@ h4{
 table{
 	width: 100%;
 	table-layout: fixed;
-	padding: 1vw;
-	margin-top: 1vw;
+	padding: 10px;
 }
 
 table tr{
@@ -262,8 +261,18 @@ table tr:first-child{
 a.anchor {
     display: block;
     position: relative;
-    top: -60px;
+    top: -59px;
     visibility: hidden;
+}
+
+.emailform{
+	float: left;
+	border-right: 3px solid grey;
+	padding-right: 1vw;
+}
+
+#contact .content{
+	margin-top: 15px;
 }
 
 @media screen and (min-width: 1500px){

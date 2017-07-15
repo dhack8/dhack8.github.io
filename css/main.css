@@ -273,6 +273,24 @@ a.anchor {
 
 #contact .content{
 	margin-top: 15px;
+	height: 435px;  /*height of email address*/
+}
+
+.findme img{
+	width: 10%;
+	margin: 15px;
+	margin-bottom: 0px;
+}
+
+#footer{
+	margin-top: 10px;
+	height: 100%;
+	background-color: #282828;
+	color: lightgrey;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	line-height: 40px;
 }
 
 @media screen and (min-width: 1500px){
@@ -332,5 +350,17 @@ a.anchor {
 	
 	table{
 		font-size: 10px;
+	}
+	
+	.emailform{
+		width: 100%;
+	}
+	
+	#contact .content{
+		height: 100%;  /*height of email address*/
+	}
+	
+	#footer p{
+		font-size: 12px;
 	}
 }

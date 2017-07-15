@@ -10,13 +10,15 @@
     <meta name="keywords" content="David,Neil,Hack,Portfolio,Resume,Online,Project">
     <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       $(function(){
         // Check the initial Poistion of the Sticky Header
-        var stickyHeaderTop = $('#menuFlex').offset().top;
+        var stickyHeaderTop = $('#main').offset().top - 60;
         $(window).on("load", function() {
-          stickyHeaderTop = $('#menuFlex').offset().top;
+          stickyHeaderTop = $('#main').offset().top - 60;
         });
         var waitForFinalEvent = (function() {
         var timers = {};
@@ -80,9 +82,9 @@
           <a class="menuItem" href="#aboutmeanchor">About Me</a>
           <a class="menuItem" href="#skillsanchor">Skills</a>
           <a class="menuItem" href="#contactanchor">Contact</a>
-          <a class="menuItem">My Resume</a>
-          <a class="menuItem">Github</a>
-          <a class="menuItem">LinkedIn</a>
+          <a class="menuItem" href="DavidHackCV.pdf" target="_blank">My Resume</a>
+          <a class="menuItem" href="https://github.com/dhack8" target="_blank">Github</a>
+          <a class="menuItem" href="https://www.linkedin.com/in/dhack8/" target="_blank">LinkedIn</a>
         </div>
       </div>
       <div id="main">

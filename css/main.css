@@ -65,20 +65,27 @@ body {
 }
 
 #menuFlex {
-  height: 60px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  background-color: #282828;
-  color: lightgrey;
-  font-size: 1.9vw;
-  max-width: 1720px;
+	height: 60px;
+	width: 100%;
+	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	background-color: #282828;
+	color: lightgrey;
+	font-size: 1.9vw;
+	max-width: 1720px;
 }
 
 .menuItem{
-	flex: 1 1 100%;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 100%;
+	        flex: 1 1 100%;
 	line-height: 60px;
 	text-align: center;
+	-webkit-transition: 0.7s;
+	-o-transition: 0.7s;
 	transition: 0.7s;
 }
 
@@ -108,11 +115,16 @@ a {
 }
 
 .about{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 }
 
 .abouttile{
-	flex: 1 1 100%;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 100%;
+	        flex: 1 1 100%;
 	margin: 1vw;
 }
 
@@ -329,7 +341,10 @@ a.anchor {
 
 @media screen and (max-width: 768px) , screen and (min-resolution: 360dpi){
 	.content{
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+				flex-direction: column;
 	}
 	
 	.content p{
@@ -338,6 +353,8 @@ a.anchor {
 	
 	.abouttile img{
 		width: 25%;
+		height: auto;
+		display: block;
 	}
 	
 	.project p{

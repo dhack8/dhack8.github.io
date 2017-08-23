@@ -1,4 +1,4 @@
-body {
+html,body {
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -112,6 +112,7 @@ a {
 	margin: auto;
 	max-width: 1720px;
 	text-align: center;
+	overflow-x: hidden;
 }
 
 .about{
@@ -166,20 +167,16 @@ h3{
 	width: 300px;
 	height: 400px;
 	background-color: lightgrey;
-	margin: 15px;
+	margin: 10px;
 	display: inline-block;
 	vertical-align:top;
 	transition: 0.3s;
 }
 
 .imagebox{
-	width: 300px;
-	height: 150px;
+	width: 100%;
+	margin: auto;
 	overflow: hidden;
-}
-
-.project img{
-	transition: 0.3s;
 }
 
 h4{
@@ -195,6 +192,13 @@ h4{
     -moz-transform:scale(1.1); /* Firefox */
     -webkit-transform:scale(1.1); /* Safari and Chrome */
     -o-transform:scale(1.1); /* Opera */
+}
+
+.project img{
+	transition: 0.3s;
+	object-fit: cover;       /* Scale the image so it covers whole area, thus will likely crop */
+	object-position: center; /* Center the image within the element */
+	width: 100%;
 }
 
 .project:hover{
@@ -339,7 +343,7 @@ a.anchor {
 	}
 }
 
-@media screen and (max-width: 768px) , screen and (min-resolution: 360dpi){
+@media screen and (max-width: 640px) , screen and (min-resolution: 360dpi){
 	.content{
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -363,6 +367,8 @@ a.anchor {
 	
 	.project{
 		height: auto;
+		width: calc(100% - 20px);
+		max-width: 300px;
 	}
 	
 	table{
@@ -371,6 +377,8 @@ a.anchor {
 	
 	.emailform{
 		width: 100%;
+		border-right: none;
+		padding-right: 0px;
 	}
 	
 	#contact .content{
